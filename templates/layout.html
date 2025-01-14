@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}" />
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    {% block nav %}
+    <nav>
+        <div class="navContainer">
+            <div>
+                <div class="leftnav">
+                    <a href="/"><img src="{{ url_for('static', filename='img/Logo.jpeg') }}" alt="icon" class="iconLogo"></a>
+                </div>
+                <div class="shdiv">
+                    {% if user %}
+                        {% if user.role == 'host' %}
+                            <a href="/addPlace">Add Place</a>
+                        {% endif %}
+                    {% endif %}
+                    
+                    </div>            
+                </div>
+            
+            <div>
+                <div>
+                    <a href="/filter">Filter</a>
+                </div>
+                <div>
+                    <a href="/feedBack">Send Feedback</a>
+                </div>
+                <div>
+                  {% if user %}
+                    <div class="navLogin">{{ user.name }}</div>
+                  {% else %}
+                    <a href="/newlogin">Log In</a>
+                  {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+    
+    {% block search %}
+    <div class="searchContainer">
+        <div>
+          <div>
+            <input type="text" placeholder="Find your dream" id="searchInput">
+          </div>
+          <div>
+            <button id="buttonSearch">Search</button>
+          </div>
+        </div>
+      </div>
+    {% endblock %}
+    
+    {% endblock %}
+   
+</body>
+{% block footer %}
+<footer class="footer">
+    <div class="">
+      <h1 class="">Sweet Home</h1>
+      <h2>Contact : +961/81810422</h2>
+      <address>
+        5534 Beirut, Lebanon <br />
+        <a class="footer__btn" href="mailto:ayk260@usal.edu.lb">Email Us</a>
+      </address>
+    </div>
+
+    <ul class="footer__nav">
+      <li class="nav__item">
+        <h2 class="nav__title">Join us</h2>
+        <ul class="nav__ul">
+          <li><a href="#">A Free Hosting Class</a></li>
+          <li><a href="#">Paid Hosting Class</a></li>
+          <li><a href="#">Ads</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item nav__item--extra">
+        <h2 class="nav__title">Sitemap</h2>
+        <ul class="nav__ul nav__ul--extra">
+          <li><a href="/">Home</a></li>
+          <li><a href="/GiftCard">Gift Card</a></li>
+          <li><a href="/filter">Filters</a></li>
+          <li><a href="/feedBack">Send Feedback</a></li>
+        </ul>
+      </li>
+
+      <li class="nav__item">
+        <h2 class="nav__title">Legal</h2>
+        <ul class="nav__ul">
+          <li><a href="/terms" target="_blank">Terms of Use</a></li>
+          <li><a href="/logout" class="LogoutButton">Logout</a></li> 
+        </ul>
+      </li>
+    </ul>
+
+    <div class="legal">
+      <p>Our Web, Spring/2024 (Koaik, Shukeir, Alaa)</p>
+      <div class="legal__links">
+        <span>Made with <span class="heart">♥</span></span>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </footer> 
+{% endblock %}
+</html>

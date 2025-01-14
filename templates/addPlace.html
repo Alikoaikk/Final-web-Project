@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/addPlace.css') }}" />
+    <title>Document</title>
+{% endblock %}
+
+{% block body %}
+{% block search %}{% endblock %}
+    {{ super() }}
+    <div class="introText">
+        <div>
+            <h2>To add a new place to the</h2>
+            <h2>Market please fill data</h2> 
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <form action="/addPlace" class="fill_hotel" method="POST" enctype="multipart/form-data">
+                <div>
+                    <input type="text" placeholder="name" name="placeNameForm">
+                </div>
+                <div>
+                    <input type="text" placeholder="Location" name="location">
+                </div>
+                <div>
+                    <input type="text" name="placeDescription" placeholder="description">
+                </div>
+                <div>
+                    <input type="number" placeholder="Number of maximom people" name="maxNumPeop">
+                </div>
+                <div>
+                    <input type="number" placeholder="Number of maximom rooms" name="maxNumRoom">
+                </div>
+                <div>
+                    <input type="number" name="placePrice" placeholder="Price for One night">
+                </div>
+                <div class="filterDiv">
+                  <div class="filterDiv">
+                    <div>
+                        <input type="checkbox" name="garage" id="garage" value="1" />
+                        <label for="garage"
+                          ><img src="../static/img/icons/garage.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="camera" id="camera" value="1"/>
+                        <label for="camera"
+                          ><img src="../static/img/icons/camera.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="pool" id="pool" value="1" />
+                        <label for="pool"
+                          ><img src="../static/img/icons/pool.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="paw" id="paw" value="1" />
+                        <label for="paw"><img src="../static/img/icons/paw.png" alt="" /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="grill" id="grill" value="1" />
+                        <label for="grill"
+                          ><img src="../static/img/icons/grill-hot-alt.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="washer" id="washer" value="1" />
+                        <label for="washer"
+                          ><img src="../static/img/icons/washer.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="router" id="router" value="1" />
+                        <label for="router"
+                          ><img src="../static/img/icons/router.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="screen" id="screen" value="1" />
+                        <label for="screen"
+                          ><img src="../static/img/icons/screen.png" alt=""
+                        /></label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="drinks" id="drinks" value="1" />
+                        <label for="drinks"
+                          ><img src="../static/img/icons/glass-cheers.png" alt=""
+                        /></label>
+                      </div>
+                </div>  
+                </div>
+                <div>
+                  <div>
+                    <span class="drop-zone" id = "drop-zone" >Drage and drop here</span>
+                    <div class="inpDiv">
+                    <input type="file" id="fileInput" class="dropZone" multiple name="imgofplace">
+                </div>
+                </div>
+                </div>
+                <div class="divPost">
+                    <button class="btnForPost" type="submit">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/addPlace.js') }}"></script>
+{% endblock %}

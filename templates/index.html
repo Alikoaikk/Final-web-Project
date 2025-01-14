@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}WELCOME | SWEET HOME{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleIndex.css') }}" />
+{% endblock %}
+
+{% block body %}
+    {{ super() }}
+    <div class="divSH">
+        <img src="{{ url_for('static', filename='img/SweetHomeText.png') }}" class="imgSweetHome">
+    </div>
+    <div style="border-bottom: 0.5px solid lightgray; width: 90%;"></div>
+    <main>
+        <div class="container"></div>
+    </main>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/IndexScript.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

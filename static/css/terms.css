@@ -1,0 +1,60 @@
+body {
+  display: flex;
+}
+aside {
+  width: 60%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: 100vh;
+  overflow: auto;
+  margin: 20px;
+  overflow-y: scroll;
+  max-height: 90vh;
+}
+main {
+  flex-grow: 1;
+  padding: 20px;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 20px 0;
+}
+nav ul li a:hover {
+  background-color: #ddd;
+}
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  main {
+    padding: 10px;
+  }
+  nav ul li a {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  aside {
+    padding: 5px;
+    margin: 5px 0;
+  }
+  main {
+    padding: 5px;
+  }
+  nav ul li a {
+    padding: 5px 0;
+  }
+}

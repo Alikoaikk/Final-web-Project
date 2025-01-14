@@ -1,0 +1,305 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  background-color: #f4f4f4;
+}
+
+.animation-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  animation: fade-in 2s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation-text {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gift-card {
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+  animation: move-up 2s ease-in-out infinite;
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.loading-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  margin-top: 20px;
+  position: relative;
+}
+
+.loading-progress {
+  width: 0;
+  height: 100%;
+  background-color: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: progress 5s forwards;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.initial-page {
+  display: none;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#icon {
+  width: 50px;
+  height: 50px;
+  margin-top: -15px;
+  margin-left: -50px;
+  border-radius: 40px;
+}
+nav {
+  
+  height: 88px;
+  display: flex;
+  padding: 0 100px;
+  margin-top: -17px;
+  margin-left: -15px;
+  margin-right: -10px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1;
+
+}
+
+nav div:nth-child(1) {
+  margin-top: 35px;
+}
+nav div:nth-child(2) {
+  width: 390px;
+  
+}
+nav div:nth-child(2) ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 150px;
+  list-style: none;
+  padding-top: 20px;
+}
+nav div:nth-child(2) ul li {
+  padding-left: 30px;
+  
+ 
+}
+nav a {
+  text-decoration: wavy;
+  
+  color: black;
+}
+button:nth-last-child(2){
+  background-color:rgb(248, 145, 162); ;
+}
+
+
+.container {
+  display: grid;
+  margin-top: 90px;
+}
+
+
+main {
+  
+flex: 2;
+flex-direction: column;
+justify-content: end;
+text-align: end;
+margin: auto;
+}
+
+main h1 {
+  font-size: 32px;
+text-align: center;
+
+}  
+main h3 {
+  font-size: 20px;
+ text-align: center;
+ text-decoration: wavy;
+}
+#img {
+  max-width: 450px;
+  max-height: 550px;
+  box-shadow: #888;
+  position: relative;
+  border-radius:20px ;
+}
+.dialog {
+  display: flex;
+  position: absolute;
+ left: 400px;
+  top: 100px;
+  width: 160px;
+  height: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-content {
+  background-color: #fefefe;
+
+  padding: 50px;
+  border: 1px solid #888;
+  width: 360px;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+ 
+}
+
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-content {
+  transition: filter 0.3s ease;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+#card20{
+width: 300px;
+
+
+}  
+#butt {
+  display: flex; 
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+}
+#butt >:nth-child(1){
+  background-color:rgb(98, 215, 119); ;
+
+}
+#butt >:nth-child(2){
+  background-color:rgb(101, 204, 233); ;
+}
+#butt >:nth-child(3){
+  background-color:rgb(233, 108, 101); ;
+}
+#butt>button{
+width: 75px;
+height: 50px;
+}
+/* Add this to your giftCard.css file */
+
+/* Define glow effect */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+#butt button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+#butt button:hover {
+  animation: glow 1s ease-in-out infinite alternate, pop 0.5s ease;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background: linear-gradient(45deg, #4ecdc4, #ec6565, #c7ecee, #7f8c8d);
+  background-size: 400% 400%;
+  animation: backgroundAnimation 10s ease infinite;
+}
+
+

@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+{% block head %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/services.css')}}">
+{% endblock %}
+{% block body %}
+{% block nav %}{{super()}}{% endblock %}
+    <div class="container">
+        <div class="desc">
+            <p>Hello, welcome to our website. We always listen to you.</p>
+            <p>Tell us your honest feedback.</p>
+        </div>
+        <div>
+            <form method="post" class="feedForm" action="/feedBack">
+                <div>
+                    <p class="Pr">What is the motivation to use us</p>
+                </div>
+                <div>
+                    <input type="text" name="motivation" placeholder="We hear you">
+                </div>
+                <div>
+                    <p class="Pr">What is your most used feature</p>
+                </div>
+                <div>
+                    <input type="text" name="mostFeature" placeholder="Write what you want">
+                </div>
+                <div>
+                    <p class="Pr">Feel free to give us your opinion</p>
+                </div>
+                <div>
+                    <textarea cols="30" rows="10" placeholder="Suggestion to make our website better..." name="opinion"></textarea>
+                </div>
+                <div class="rating">
+                    <span class="star" data-rating="1">&#9733;</span>
+                    <span class="star" data-rating="2">&#9733;</span>
+                    <span class="star" data-rating="3">&#9733;</span>
+                    <span class="star" data-rating="4">&#9733;</span>
+                    <span class="star" data-rating="5">&#9733;</span>
+                    <label for="rateUs">Rate Us</label>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

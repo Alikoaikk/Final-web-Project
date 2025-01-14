@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="../static/css/newLogin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+   
+<div class="form-body">
+    <div class="logNav">
+        <a href="/">
+        <img src="/static/img/Logo.jpeg" class="logoImg" > </a>
+    </div>
+        <div class="form-holder">
+            <div class="form-content">
+                <div class="form-items">
+                    <h3>Login</h3>
+                    
+                    
+                    <form class="requires-validation" novalidate method="POST" action="/newlogin">
+                        <div class="logOpt">
+                        <button type = "button" class="btn btn-secondary">Login</button>
+                        <button id = 'register' type="button" class="btn btn-light"><a href="{{ url_for('register') }}">register</a></button>
+                    </div>
+                    <div >
+                        <p class="font-weight-bold">sign in with</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-primary">Fecbook</button>
+                        <button type="button" class="btn btn btn-outline-light">Google</button>
+                        <button type="button" class="btn btn-outline-dark">Gmail</button>
+                        <button type="button" class="btn btn-outline-info">Twitter</button>
+                    </div>
+                    
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" placeholder="Email" required name = "Email">
+                            
+                        </div>
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="password" name="password" placeholder="Password" required>
+                            
+                        </div>
+
+
+                        <div class="form-button mt-3">
+                            <button type="submit" class="btn btn-danger">confirm</button>
+                            <a href="/Pages/" class="btn-sm">forget Password ?</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+</div>
+<script src="../js/hotelData.js"></script>
+<script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="../js/login.js"></script>
+</body>
+
+
+</html>

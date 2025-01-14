@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/filter.css') }}" />
+{{super()}}    
+   <title>FILTERS | SWEET HOME</title>
+{% endblock %}
+
+{% block body %}
+    {% block nav %}
+      {{super()}}
+    {% endblock %}
+
+    {% block search %}
+    {% endblock %}
+
+    
+      <div class="container">
+        <div class="filter">
+        <div class="quoteAndButton">
+        <div class="quoteDiv">
+          <div>
+          <p>
+    "Pick where your 
+    dream vacation will 
+    be best for you"</p>
+          </div>
+        </div>
+        <div>
+          <div class="buttonSubmition"><button id="filterButton">Submit</button></div>
+        </div>
+      </div>
+        <div class="filtersDiv">
+          <div class="filtersDiv2">
+          <form action="">
+            <div class="numberHolder">
+              <div>
+                <label for="">Number of rooms :</label>
+                <button id="buttonPlusRoom" type="button">+</button>
+                <p class="countRooms">0</p>
+                <button id="buttonMinusRoom" type="button">-</button>
+              </div>
+              <div>
+                <label for="">Number of persons :</label>
+                <button id="buttonPlusPerson" type="button">+</button>
+                <p class="countPerson">0</p>
+                <button id="buttonMinusPerson" type="button">-</button>
+              </div>
+            </div>
+
+            <div class="holder">
+              <div>
+                <input type="checkbox" name="garage" id="garage" />
+                <label for="garage">
+                  <img src="{{ url_for('static', filename='img/icons/garage.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="camera" id="camera" />
+                <label for="camera">
+                  <img src="{{ url_for('static', filename='img/icons/camera.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="pool" id="pool" />
+                <label for="pool">
+                  <img src="{{ url_for('static', filename='img/icons/pool.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="paw" id="paw" />
+                <label for="paw">
+                  <img src="{{ url_for('static', filename='img/icons/paw.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="grill" id="grill" />
+                <label for="grill">
+                  <img src="{{ url_for('static', filename='img/icons/grill-hot-alt.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="washer" id="washer" />
+                <label for="washer">
+                  <img src="{{ url_for('static', filename='img/icons/washer.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="router" id="router" />
+                <label for="router">
+                  <img src="{{ url_for('static', filename='img/icons/router.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="screen" id="screen" />
+                <label for="screen">
+                  <img src="{{ url_for('static', filename='img/icons/screen.png') }}" alt="" />
+                </label>
+              </div>
+              <div>
+                <input type="checkbox" name="drinks" id="drinks" />
+                <label for="drinks">
+                  <img src="{{ url_for('static', filename='img/icons/glass-cheers.png') }}" alt="" />
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+      
+        <div class="filteredCards"></div>
+      
+      </div>
+    
+   
+{% endblock %}
+
+{% block footer %}
+{{super()}}
+ <script src="{{ url_for('static', filename='js/filters.js') }}"></script>
+{% endblock %}

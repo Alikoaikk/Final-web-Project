@@ -1,0 +1,84 @@
+/* -----------------Container layout ---------------------- */
+.container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  /* flex-wrap: unset; */
+  gap: 27px;
+}
+/* --------------------------------card------------------------------------- */
+
+.card {
+  border: 1px solid black;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(4, 95px);
+  grid-template-rows: repeat(6, 65px);
+  grid-template-areas:
+    "Image Image Image Image"
+    "Image Image Image Image"
+    "Image Image Image Image"
+    "Image Image Image Image"
+    "Image Image Image Image"
+    "Title Title Title Title";
+  border-radius: 40px;
+}
+/* --------------------------------Image and its container----------------------------------- */
+img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.img {
+  grid-area: Image;
+}
+/* --------------------------------textarea below image------------------------ */
+.tital1 {
+  grid-area: Title;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  color: white;
+  text-align: center;
+  background: rgba(208, 208, 208);
+}
+
+.backDiv {
+  position: absolute;
+  width : 380px ;
+  
+  height: 0px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: grey;
+  grid-area: Image;
+  transform: rotateY(90deg);
+  transition: 0.2s;
+  overflow: hidden;
+  transform: translateX(0.001px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(208, 208, 208, 0.76);
+  text-align: center;
+  
+  align-content: center;
+  
+}
+
+
+
+.card:hover .backDiv {
+  transition: 0.5s ease;
+  height: 43%;
+}
+
+
+.imgSweetHome {
+  width: 100%;
+  
+}
+
+.divSH {
+  width: 80%;
+  padding-top: 20px;
+}

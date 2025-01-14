@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Gift Card Info
+{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/RedeemCard.css') }}">
+{% endblock %}
+
+{% block body %}
+    {% block nav %}
+    {{ super() }}
+    {% endblock %}
+    
+    {% block search %}
+    {% endblock %}
+    
+    <main>
+      <div class="container">
+        <div class="card">
+            <div class="card-inner">
+                <div class="front">
+                    <div class="d">
+                        <div class="dd">
+                            <div class="logo"></div>
+                            <h1>Sweet</h1>
+                        </div>
+                        <h1>Gift Card</h1>
+                    </div>
+                    <p>Unlock the joy of shopping with our special gift to you</p>
+                    <p>Your loyalty means the world to us. Enjoy this little treat.</p>
+                </div>
+                <div class="back">
+                    <p>Welcome! Start benefiting from our gift now.</p>
+                    <label for="code">Code:</label>
+                    <input type="text" id="code" name="code" placeholder="XXXX-XXX-XXX-XXXX">
+                    <button type="submit" id="checkButton">Check</button>
+                    <label class="error-label" id="errorLabel"></label>
+                </div>
+            </div>
+        </div>
+      </div>
+    </main>
+    
+{% endblock %}
+{% block footer %}
+{{super()}}
+<script src="{{url_for('static',filename='js/RedeemCard.js')}}"></script>
+{% endblock %}
+

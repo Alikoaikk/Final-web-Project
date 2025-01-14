@@ -1,0 +1,77 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-content: space-between; */
+}
+.introText {
+    display: flex;
+    align-items: center;
+}
+.introText > div > h2{
+    font-size: 4rem; 
+    line-height: 1.2; 
+    word-wrap: break-word;
+}
+.container {
+    border: 2px solid black;
+    padding: 40px;
+    width: 50%;
+    background-color: gainsboro;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 16px;
+
+}
+
+
+
+form > div:nth-child(1),form > div:nth-child(2),form > div:nth-child(3),form > div:nth-child(4),form > div:nth-child(5) {
+    width: 60%;
+}
+
+.dropZone {
+    height: 200px;
+    width: 500px;
+
+}
+
+.divPost {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 132px;
+}
+
+.btnForPost {
+    width: 80px;
+    height: 30px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+}
+.filterDiv{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.filterDiv > div >label > img{
+    width: 30px;
+    height: 30px;
+}
